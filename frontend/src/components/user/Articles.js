@@ -27,7 +27,7 @@ export default function UserArticles(props) {
     const { tokenConfig, auth } = useContext(AuthContext)
     const { msg, setMsg, deleteArticle } = useContext(ArticleContext)
     const { deleteDraft } = useContext(DraftContext)
-    const { alertMsg, setAlertMsg } = useContext(AlertContext)
+    const { setAlertMsg } = useContext(AlertContext)
 
     const history = useHistory()
 
