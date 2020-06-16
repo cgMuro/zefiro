@@ -57,9 +57,7 @@ export default function UserArticles(props) {
     const handleDeleteArticle = () => {
         deleteArticle(id)
 
-        if (msg === 'Article deleted successfully!') {
-            setArticles(prevstate => prevstate.filter(article => article._id !== id))
-        }
+        setArticles(prevstate => prevstate.filter(article => article._id !== id))
 
         setId('')
         setType('')
@@ -73,9 +71,7 @@ export default function UserArticles(props) {
     const handleDeleteDraft = () => {
         deleteDraft(id)
 
-        if (msg === 'Draft deleted successfully!') {
-            setDrafts(prevstate => prevstate.filter(draft => draft._id !== id))
-        }
+        setDrafts(prevstate => prevstate.filter(draft => draft._id !== id))
 
         setId('')
         setType('')

@@ -53,12 +53,12 @@ export default function User(props) {
                         </Link>
                         <Container className="d-flex justify-content-center align-items-center flex-column" style={{ height: '80vh' }} id="user-page-container">
                             <h2 className="text-center mb-3">Welcome <span style={{ fontWeight: 'bold' }}>{user ? user.name : null}</span></h2>
-                            <Link to={`/user/${props.match.params.id}/articles`} className="linkStyle">
+                            <Link to={`/user/${user._id}/articles`} className="linkStyle">
                                 <Row className="mb-2 user-row text-center">
                                     <h5>SEE YOUR ARTICLES</h5>
                                 </Row>
                             </Link>
-                            <Link to={`/user/${props.match.params.id}/create-article`} className="linkStyle">
+                            <Link to={`/user/${user._id}/create-article`} className="linkStyle">
                                 <Row className="user-row text-center">
                                     <h5>CREATE NEW ARTICLE</h5>
                                 </Row>

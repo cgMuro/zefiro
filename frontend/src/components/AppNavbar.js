@@ -46,7 +46,7 @@ export default function AppNavbar() {
                                 </NavItem>
                                 <NavItem>
                                     <NavLink>
-                                        <Link to={`/user/${ auth.user_id ? auth.user._id : auth.user.id}`} className="linkStyle">User</Link>
+                                        <Link to={`/user/${auth.user._id}`} className="linkStyle">User</Link>
                                     </NavLink>
                                 </NavItem>
                             </>
