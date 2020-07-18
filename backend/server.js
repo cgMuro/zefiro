@@ -6,7 +6,7 @@ const path = require('path')
 
 const connectDB = require('./config/db')
 
-dotenv.config({ path: './config/.env' })
+dotenv.config({ path: './.env' })
 
 connectDB()
 
