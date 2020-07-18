@@ -30,7 +30,6 @@ export default function Register() {
         } else {
             setMsg('')
         }
-
     }, [error, auth])
 
     const handleChange = (f, e) => {
