@@ -89,12 +89,13 @@ export default function UserArticles(props) {
                 isOpen={id !== '' ? true : false}
                 style={{ color: 'red' }}
             >
-                <ModalHeader>
+                <ModalHeader className="text-center font-weight-bold">
                     Are you sure you want to delete this {type}? The action is irreversible.
                 </ModalHeader>
                 <ModalBody>
                     <Button
                         color="danger"
+                        outline
                         onClick={() => {
                             type === 'article' ? handleDeleteArticle() : handleDeleteDraft()
                             setTimeout(() => {
@@ -134,7 +135,7 @@ export default function UserArticles(props) {
             }
             <Container className="d-flex justify-content-center align-items-center flex-column" id="user-article-container">
 
-                <h2 className="text-center mt-3 mb-5">Your articles:</h2>
+                <h2 className="text-center mt-3 mb-5">Your Articles</h2>
                 {
                     articles.map(article => (
                         <>
@@ -143,10 +144,10 @@ export default function UserArticles(props) {
                                     <Col sm={5} className="p-0">
                                         <img src={article.header_img} className="img-fluid" alt="" />
                                     </Col>
-                                    <Col className="pb-2" sm={7} style={{ backgroundColor: 'gray' }}>
+                                    <Col className="pb-2" sm={7}>
                                         <h1 className="text-center mt-2">{article.title}</h1>
                                         <p>{article.description}</p>
-                                        <span>{moment(article.created_at).format('LL')}</span>
+                                        <small className="mt-4 text-secondary">{moment(article.created_at).format('LL')}</small>
                                     </Col>
                                 </Row>
                             </Link>
@@ -175,7 +176,7 @@ export default function UserArticles(props) {
                 ?
                 <Container className="d-flex justify-content-center align-items-center flex-column" id="user-draft-container">
 
-                    <h2 className="text-center mt-3 mb-5">Your drafts:</h2>
+                    <h2 className="text-center mt-3 mb-5">Your Drafts</h2>
                     {drafts.map(draft => (
                         <>
                             <Link to={`/user/drafts/${draft._id}`} className="linkStyle">
@@ -183,10 +184,10 @@ export default function UserArticles(props) {
                                     <Col sm={5} className="p-0">
                                         <img src={draft.header_img} className="img-fluid" alt="" />
                                     </Col>
-                                    <Col className="pb-2" sm={7} style={{ backgroundColor: 'gray' }}>
+                                    <Col className="pb-2" sm={7}>
                                         <h1 className="text-center mt-2">{draft.title}</h1>
                                         <p>{draft.description}</p>
-                                        <span>{moment(draft.created_at).format('LL')}</span>
+                                        <small className="mt-4 text-secondary">{moment(draft.created_at).format('LL')}</small>
                                     </Col>
                                 </Row>
                             </Link>

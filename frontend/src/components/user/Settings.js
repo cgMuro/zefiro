@@ -76,9 +76,9 @@ export default function Settings(props) {
                 centered
             >
                 <ModalBody>
-                    <Form onSubmit={(e) => handleSubmit(e)}>
+                    <Form onSubmit={(e) => handleSubmit(e)} className="text-center">
                         <FormGroup>
-                            <Label htmlFor={toUpdate}>New {toUpdate === 'pen_name' ? 'pen name' : toUpdate}</Label>
+                            <Label htmlFor={toUpdate} className="mb-4">New {toUpdate === 'pen_name' ? 'pen name' : toUpdate}</Label>
                             <Input
                                 name={toUpdate}
                                 value={input}
@@ -89,7 +89,7 @@ export default function Settings(props) {
                         </FormGroup>
                     </Form>
                     <Button
-                        color="outline-info"
+                        color="outline-primary"
                         className="mt-3"
                         block
                         onClick={(e) => {
@@ -116,10 +116,10 @@ export default function Settings(props) {
                 {
                     user
                         ?
-                        <Container className="p-5">
+                        <Container className="p-5 bg-dark">
                             <Row className="mb-4">
                                 <Col sm={10}>
-                                    <p>Name: <b>{user.name}</b></p>
+                                    <p className="text-secondary">Name <b className="text-light font-weight-bold ml-lg-5">{user.name}</b></p>
                                 </Col>
                                 <Col sm={2}>
                                     <Button
@@ -136,12 +136,12 @@ export default function Settings(props) {
                             </Row>
                             <Row className="mt-5 mb-5">
                                 <Col sm={10}>
-                                    <p>Email: <b>{user.email}</b></p>
+                                    <p className="text-secondary">Email <b className="text-light font-weight-bold ml-sm-2 ml-lg-5">{user.email}</b></p>
                                 </Col>
                             </Row>
                             <Row className="mt-5 mb-5">
                                 <Col sm={9}>
-                                    <p>Pen name: <b>{user.pen_name ? user.pen_name : 'No pen name'}</b></p>
+                                    <p className="text-secondary">Pen name <b className="text-light font-weight-bold ml-sm-2 ml-lg-5">{user.pen_name ? user.pen_name : 'No pen name'}</b></p>
                                 </Col>
                                 <Col sm={1}>
                                     <Button
@@ -158,7 +158,7 @@ export default function Settings(props) {
                                 </Col>
                                 <Col sm={1}>
                                     <Button
-                                        className="ml-5"
+                                        className="ml-lg-5 mt-2 mt-lg-0"
                                         color="outline-danger"
                                         size="sm"
                                         onClick={(e) => {
@@ -173,7 +173,7 @@ export default function Settings(props) {
                             </Row>
                             <Row className="mt-4">
                                 <Col sm={10}>
-                                    <p>Password: *********</p>
+                                    <p className="text-secondary">Password <b className="text-light font-weight-bold ml-lg-5">*********</b></p>
                                 </Col>
                             </Row>
                         </Container>

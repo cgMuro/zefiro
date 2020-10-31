@@ -109,13 +109,14 @@ export default function LoginModal() {
                             />
                         </FormGroup>
                         <Button
-                            color="dark"
+                            color="primary"
                             block
                         >
                             Login
                         </Button>
                         <Button
                             color="danger"
+                            outline
                             block
                             onClick={() => toggle()}
                         >

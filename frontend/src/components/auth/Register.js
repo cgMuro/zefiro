@@ -54,10 +54,10 @@ export default function Register() {
             <Container className="d-flex align-items-center justify-content-center" id="container">
                 <div className="container-fluid my-3">
                     {msg ? <Alert color="danger">{msg}</Alert> : null}
-                    <h4 className="text-center">Sign up</h4>
+                    <h4 className="text-center text-light font-weight-bold mb-3">SIGN UP</h4>
                     <Form onSubmit={(e) => handleSumbit(e)}>
                         <FormGroup>
-                            <Label for="name" className="" inline>Name</Label>
+                            <Label for="name" className="text-light" inline>NAME <span className='text-danger'>*</span></Label>
                             <Input
                                 type="text"
                                 name="name"
@@ -66,7 +66,7 @@ export default function Register() {
                                 onChange={(e) => handleChange(setName, e)}
                                 required
                             />
-                            <Label for="email" className="mt-5">Email</Label>
+                            <Label for="email" className="mt-5 text-light">EMAIL <span className='text-danger'>*</span></Label>
                             <Input
                                 type="email"
                                 name="email"
@@ -75,7 +75,7 @@ export default function Register() {
                                 onChange={(e) => handleChange(setEmail, e)}
                                 required
                             />
-                            <Label for="password" className="mt-5">Password</Label>
+                            <Label for="password" className="mt-5 text-light">PASSWORD <span className='text-danger'>*</span></Label>
                             <Input
                                 type="password"
                                 name="password"
@@ -84,7 +84,7 @@ export default function Register() {
                                 onChange={(e) => handleChange(setPassword, e)}
                                 required
                             />
-                            <Label for="penName" className="mt-5">Pen name</Label>
+                            <Label for="penName" className="mt-5 text-light">PEN NAME</Label>
                             <Input
                                 type="text"
                                 name="penName"
@@ -96,7 +96,7 @@ export default function Register() {
                         </FormGroup>
                         <Button
                             type="submit"
-                            color="info"
+                            color="primary"
                             block
                             className="mt-5"
                         >

@@ -28,7 +28,7 @@ export default function AppNavbar() {
         <Navbar color="dark" dark expand="sm">
             <Container>
                 <Link to="/" className="linkStyle">
-                    <Navbar className="text-light">ZEFIRO</Navbar>
+                    <Navbar className="text-light" style={{ opacity: '1', fontFamily: "Courier New", fontSize: '40px' }}>ZEFIRO</Navbar>
                 </Link>
                 <NavbarToggler onClick={() => toggle()}></NavbarToggler>
                 <Collapse isOpen={isOpen} navbar>

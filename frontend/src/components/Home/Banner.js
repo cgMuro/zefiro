@@ -7,7 +7,9 @@ export default function Banner() {
             <div className="d-flex mx-auto justify-content-center align-items-center" id="banner">
                 <Button
                     href="#articles"
-                    className="btn-outline-dark mt-5"
+                    className="mt-5"
+                    outline
+                    color='dark'
                 >View Articles</Button>
             </div>
         </>
