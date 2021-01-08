@@ -1,7 +1,7 @@
 # Blog Application
 
 It's a website where people can publish articles.         
-The application is deployed with Heroku and you can see it live [here](https://warm-fjord-18553.herokuapp.com/).     
+The application is deployed with Heroku and you can see it live [here](https://zefiro.herokuapp.com/).     
 (The design is still a work in progress)
 
 On the frontend I used React, Bootstrap, and [Editor.js](https://editorjs.io/).            
